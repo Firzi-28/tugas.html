@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Komunitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        :root {
+            --bg-undefined-500: #1a1a2e;
+            --text-undefined-500: #e6e6e6;
+            --primary-undefined-500: #4ade80;
+            --secondary-undefined-500: #60a5fa;
+        }
+        
+        body.undefined-mode {
+            background-color: var(--bg-undefined-500);
+            color: var(--text-undefined-500);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        .primary {
+            color: var(--primary-undefined-500);
+        }
+        
+        .secondary {
+            color: var(--secondary-undefined-500);
+        }
+        
+        .welcome-text {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .equation {
+            font-size: 1.125rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="undefined-mode min-h-screen flex flex-col items-center justify-center p-6">
+    <div class="max-w-2xl text-center">
+        <h1 class="welcome-text primary">Selamat datang di Website Komunitas</h1>
+        <p class="text-xl mb-6"><b><i class="secondary">Belajar Web itu Mudah</i></b></p>
+        <p class="equation">X<sup>2</sup> + Y<sub>2</sub> = Z</p>
+        <div class="flex justify-center space-x-4 mt-8">
+            <button class="px-4 py-2 bg-primary-undefined-500 text-white rounded-lg hover:bg-opacity-90 transition">
+                <i data-feather="user-plus" class="mr-2"></i>Join Komunitas
+            </button>
+            <button class="px-4 py-2 bg-secondary-undefined-500 text-white rounded-lg hover:bg-opacity-90 transition">
+                <i data-feather="book-open" class="mr-2"></i>Belajar Sekarang
+            </button>
+        </div>
+        <p class="footer mt-12">&copy; 2025 Komunitas Web</p>
+    </div>
+    
+    <script>
+        feather.replace();
+        
+        // Add some interactive elements
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.classList.add('transform', 'scale-105');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('transform', 'scale-105');
+            });
+        });
+    </script>
+</body>
+</html>
